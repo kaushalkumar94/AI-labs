@@ -1,5 +1,5 @@
 
-********# 8-Puzzle Problem Solver using BFS (Breadth-First Search)
+# 8-Puzzle Problem Solver using BFS (Breadth-First Search)
 
 This project implements a solution to the **8-puzzle problem** using the **Breadth-First Search (BFS)** algorithm in Python. The program searches for the shortest path to reach the goal configuration from a given starting state.
 
@@ -48,4 +48,5 @@ By default, the goal state is:
 ##  Author
 
 [Kaushal Kumar] 
+
 
