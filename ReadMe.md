@@ -1,53 +1,79 @@
+**8-Puzzle Problem using BFS and DFS**
 
-# 8-Puzzle Problem Solver using BFS (Breadth-First Search)
+**Aim**
+To solve the 8-puzzle problem using Breadth First Search (BFS) and Depth First Search (DFS) algorithms and compare their time and space complexities.
 
-This project implements a solution to the **8-puzzle problem** using the **Breadth-First Search (BFS)** algorithm in Python. The program searches for the shortest path to reach the goal configuration from a given starting state.
+**BFS Algorithm:**
+Start with the initial puzzle configuration.
+Use a queue to store states to be explored.
 
- 
+Keep a visited set to avoid revisiting states.
 
-##  What is the 8-Puzzle Problem?
 
-The 8-puzzle consists of a 3x3 grid containing 8 numbered tiles and one blank space (represented by 0). The goal is to move the tiles around until they are in a specific final configuration using valid moves (up, down, left, right).
+Remove the first state from the queue.
 
-###  Valid Moves:
-- You can slide a tile into the blank space (0)
-- Only adjacent tiles to 0 can move
 
-###  Goal State:
-By default, the goal state is:
-```
-1 2 3
-4 5 6
-7 8 0
-```
+If it is the goal state, stop.
 
- 
 
-##  Algorithm Used: Breadth-First Search (BFS)
+Otherwise, generate all valid moves (up, down, left, right) and add the resulting states to the queue.
 
-**BFS** is used to explore the shortest sequence of valid moves to reach the goal state from the initial configuration.
 
-- It explores all nodes level by level
-- Uses a **queue** to manage states
-- Ensures **shortest path** to solution
-- Uses **coloring** (`white`, `gray`, `black`) to track visited states
+Repeat until the goal is found or the queue is empty.
 
- 
 
-##  How It Works
+**Time Complexity:**
+Worst case: **O(b^d)** , where
 
-1. Input an initial puzzle configuration (e.g., `[[1, 3, 6], [8, 0, 4], [5, 2, 7]]`)
-2. Define the goal state (default is `[[1,2,3],[4,5,6],[7,8,0]]`)
-3. Each state is represented as a `State` object, holding:
-   - Current tile configuration
-   - Reference to its parent (for tracing the solution path)
-4. The program performs BFS to explore the state space
-5. If goal state is found:
-   - It prints the path from start to goal
-   - Displays the number of moves required
-##  Author
 
-[Kaushal Kumar] 
+b = branching factor (average 2–3 for 8-puzzle)
 
+
+d = depth of solution.
+
+
+**Space Complexity:**
+**O(b^d)**, because BFS stores all nodes at the current level in memory.
+
+
+**DFS Algorithm:**
+Start with the initial puzzle configuration.
+
+
+Use a stack (or recursion) to store states to be explored.
+
+
+Keep a visited set to avoid infinite loops.
+
+
+Pop the top state from the stack.
+
+
+If it is the goal state, stop.
+
+
+Otherwise, generate all valid moves (up, down, left, right) and push them onto the stack.
+
+
+Repeat until the goal is found or the stack is empty.
+
+
+**Time Complexity:**
+Worst case:** O(b^m)**, where
+b = branching factor
+m = maximum depth of the search tree.
+
+
+**Space Complexity:**
+**O(b*m)** for recursive DFS (or linear in depth),
+
+
+Less than BFS in general, but can still grow large if depth is big.
+BFS is complete and guarantees the shortest path but uses more memory.
+
+
+DFS uses less memory but may go deep into useless paths and is not guaranteed to find the shortest path.
+
+author Kaushal kumar
 
 
