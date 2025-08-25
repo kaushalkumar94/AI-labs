@@ -16,7 +16,7 @@ The program should:
 2. `n` lines of `m` integers each (0 = obstacle, 1 = land)
 3. Start position: `sx sy`
 4. Goal position: `gx gy`
-
+ 
 **Output**:
 - If a path exists: prints total cost, list of coordinates in the path, and a grid visualization using:
   - `S` start, `E` end, `*` path, `#` obstacle, `.` traversable cell
