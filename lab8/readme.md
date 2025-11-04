@@ -1,4 +1,4 @@
-#  Introduction to LISP Programming
+#  Introduction to LISP Programming.
 
 ##  What is LISP?
 
