@@ -1,4 +1,4 @@
-# A* Grid Pathfinding — README
+# A* Grid Pathfinding  
 
 ## Problem Statement
 Given an \(n \times m\) grid where each cell is either traversable land (`1`) or an obstacle/river (`0`), find the **least-cost path** from a start cell `(sx, sy)` to a goal cell `(gx, gy)` using the A* search algorithm. Movement is allowed in **8 directions** (N, S, E, W, and four diagonals). Orthogonal moves cost `1`; diagonal moves cost `√2` by convention (the provided code currently uses `1.5`, which you can switch to `sqrt(2)` for geometrically accurate costs).
@@ -83,3 +83,4 @@ Let `N = n * m` be the number of cells.
 
 ---
  
+
