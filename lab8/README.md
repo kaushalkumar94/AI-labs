@@ -1,4 +1,4 @@
-# LISP Programming Language - AI Focus
+# LISP Programming Language - AI Focus.
 
 ## 1. Introduction
 - **Full Form:** LISt Processing
